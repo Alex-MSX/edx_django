@@ -1,0 +1,38 @@
+Conceptos:
+
+- pip install django
+- Crear un proyecto: django-admin startproject (nombre del proyecto)
+- Crear una app dentro del proyecto: django-admin startapp (nombre de la app) o python manage.py startapp (nombre de la app)
+- Agregar app a las aplicaciones instaladas en settings.py
+
+- Distinción y conexión entre urls.py project y urls.py app a través del comando include y nombrar rutas para acceder con el comando {% url 'name' %}
+- Introducción al uso de bases de datos con models.py y migraciones: python manage.py makemigrations y python manage.py migrate
+- Introducción al uso de la consola con comando: python manage.py shell
+
+    Crear un registro Flight
+    f = Flight(origin, destination, duration)
+    f.save()
+
+    Ver todos los registros Flight
+    Flights.objects.all()
+
+    Seleccionar un registro de Flight
+    f = Flight.objects.get(pk=#)
+
+    Acceder a sus "columnas"
+    f.origin
+    f.delete()
+
+- Uso de templates: crear una carpeta de nombre templates dentro de la app quedando app/templates/app/file.html
+  Es una buena práctica el namespacing de los templates, es decir, dentro de la carpeta de templates crear una carpeta con el nombre de la app
+
+- Introducción a template Inheritance con {% extends "" %}
+- Introducción a uso de lenguaje similar a ginger {% if %} {% for %} etc
+
+- Introducción al admin:
+    Registrar los modelos en el admin.py: admin.site.register(modelo)
+    python manage.py createsuperuser
+
+- Introducción al método POST
+- Introducción al envío de información con request.POST[""]
+- Introducción en forms al {% csrf_token %}

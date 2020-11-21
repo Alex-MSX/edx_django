@@ -1,0 +1,14 @@
+{% extends "flights/base.html" %}
+
+{% block title %}
+  Booked
+{% endblock %}
+
+{% block body %}
+  <h1>Congratulations! {{ passenger }}</h1>
+  <p>You have been booked succesfully to flight {{ flight }}</p>
+
+  <hr>
+  <a href="{% url 'index' %}">Back to flights</a>
+
+{% endblock %}
